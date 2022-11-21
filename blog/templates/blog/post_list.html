@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for animal in animaux %}
+        <div class="animal">
+            <h2><a href="/animal/{{ animal.id_animal }}">{{ animal.id_animal }}</a></h2>
+            <p>{{ animal.etat|linebreaksbr }} ; {{ animal.lieu|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
